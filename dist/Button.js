@@ -42,9 +42,6 @@ var AriaMenuButtonButton = function (_React$Component) {
           event.preventDefault();
           if (!ambManager.isOpen) {
             ambManager.openMenu();
-            ambManager.focusItem(0);
-          } else {
-            ambManager.focusItem(0);
           }
           break;
         case 'Enter':
@@ -61,7 +58,7 @@ var AriaMenuButtonButton = function (_React$Component) {
       }
     }, _this.handleClick = function () {
       if (_this.props.disabled) return;
-      _this.context.ambManager.toggleMenu();
+      _this.context.ambManager.toggleMenu({}, { focusMenu: false });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
